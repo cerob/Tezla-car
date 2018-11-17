@@ -3,7 +3,7 @@
  * Auto generated Run-Time-Environment Component Configuration File
  *      *** Do not modify ! ***
  *
- * Project: 'LAB_001' 
+ * Project: 'Tezla' 
  * Target:  'Target 1' 
  */
 
