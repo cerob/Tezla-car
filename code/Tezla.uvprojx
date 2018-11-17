@@ -456,6 +456,16 @@
               <FileType>5</FileType>
               <FilePath>.\Library\Timer.h</FilePath>
             </File>
+            <File>
+              <FileName>MotorController.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Library\MotorController.c</FilePath>
+            </File>
+            <File>
+              <FileName>MotorController.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Library\MotorController.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
