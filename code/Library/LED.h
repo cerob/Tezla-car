@@ -34,4 +34,9 @@ void LED_Front_Left_Off(void);
 void LED_Back_Right_Off(void);
 void LED_Back_Left_Off(void);
 
+void LED_Forward(void);
+void LED_Backward(void);
+void LED_Right(void);
+void LED_Left(void);
+
 #endif

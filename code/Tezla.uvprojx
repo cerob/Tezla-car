@@ -391,6 +391,11 @@
               <FileType>5</FileType>
               <FilePath>.\Parameters.h</FilePath>
             </File>
+            <File>
+              <FileName>Parameters.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Parameters.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

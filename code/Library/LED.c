@@ -68,3 +68,31 @@ void LED_Back_Right_Off() {
 void LED_Back_Left_Off() {
 	GPIO_PIN_Write(LED_Back_Left_PORT, LED_Back_Left_MASK, LOW);
 }
+
+void LED_Forward(void) {
+	LED_Front_Right_On();
+	LED_Front_Left_On();
+	LED_Back_Right_Off();
+	LED_Back_Left_Off();
+}
+
+void LED_Backward(void) {
+	LED_Front_Right_Off();
+	LED_Front_Left_Off();
+	LED_Back_Right_On();
+	LED_Back_Left_On();
+}
+
+void LED_Right(void) {
+	LED_Front_Right_On();
+	LED_Front_Left_Off();
+	LED_Back_Right_On();
+	LED_Back_Left_Off();
+}
+
+void LED_Left(void) {
+	LED_Front_Right_Off();
+	LED_Front_Left_On();
+	LED_Back_Right_Off();
+	LED_Back_Left_On();
+}
