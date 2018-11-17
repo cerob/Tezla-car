@@ -392,24 +392,59 @@
           <GroupName>Library</GroupName>
           <Files>
             <File>
-              <FileName>LED.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\LED.h</FilePath>
+              <FileName>Joystick.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Library\Joystick.c</FilePath>
             </File>
             <File>
-              <FileName>GPIO.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\GPIO.h</FilePath>
+              <FileName>PWM.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Library\PWM.c</FilePath>
+            </File>
+            <File>
+              <FileName>Timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Library\Timer.c</FilePath>
             </File>
             <File>
               <FileName>GPIO.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\GPIO.c</FilePath>
+              <FilePath>.\Library\GPIO.c</FilePath>
             </File>
             <File>
               <FileName>LED.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\LED.c</FilePath>
+              <FilePath>.\Library\LED.c</FilePath>
+            </File>
+            <File>
+              <FileName>GPIO.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Library\GPIO.h</FilePath>
+            </File>
+            <File>
+              <FileName>Joystick.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Library\Joystick.h</FilePath>
+            </File>
+            <File>
+              <FileName>LED.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Library\LED.h</FilePath>
+            </File>
+            <File>
+              <FileName>PWM.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Library\PWM.h</FilePath>
+            </File>
+            <File>
+              <FileName>SystemStructures.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Library\SystemStructures.h</FilePath>
+            </File>
+            <File>
+              <FileName>Timer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Library\Timer.h</FilePath>
             </File>
           </Files>
         </Group>
