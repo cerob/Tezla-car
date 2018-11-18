@@ -3,12 +3,13 @@
 
 #include "LPC407x_8x_177x_8x.h"
 
-uint32_t ROBOT_SPEED;
-uint32_t TURN_LEFT_FLAG = 0;
-uint32_t TURN_RIGHT_FLAG = 0;
-uint32_t FORWARD_FLAG = 0;
-uint32_t BACKWARD_FLAG = 0;
-uint32_t ROTATION_NUMBER_FOR_90_DEGREE;
+
+static uint32_t ROBOT_SPEED;
+static uint32_t TURN_LEFT_FLAG = 0;
+static uint32_t TURN_RIGHT_FLAG = 0;
+static uint32_t FORWARD_FLAG = 0;
+static uint32_t BACKWARD_FLAG = 0;
+static uint32_t ROTATION_NUMBER_FOR_90_DEGREE;
 
 void Set_Turn_Left_Flag(void);
 void Set_Turn_Right_Flag(void);

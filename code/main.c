@@ -10,12 +10,12 @@
 
 void init() {
 	LED_Init();
-	Timer_Init();
-	Joystick_Init();
-	MotorController_Init();
+	//Timer_Init();
+	//Joystick_Init();
+	//MotorController_Init();
 	
-	PWM_Init();
-	PWM_Write(0);
+//	PWM_Init();
+	//PWM_Write(0);
 }
 
 /* 
