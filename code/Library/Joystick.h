@@ -13,6 +13,19 @@
 #define JOYSTICK_CENTER_MASK	((uint32_t) 1 << 3)
 #define JOYSTICK_RIGHT_MASK		((uint32_t) 1 << 4)
 
+
+
+
+#define JOYSTICK_IOCON0	*((volatile uint32_t *) 0x4002C280)
+#define JOYSTICK_IOCON1	*((volatile uint32_t *) 0x4002C284)
+#define JOYSTICK_IOCON2	*((volatile uint32_t *) 0x4002C288)
+#define JOYSTICK_IOCON3	*((volatile uint32_t *) 0x4002C28C)
+#define JOYSTICK_IOCON4	*((volatile uint32_t *) 0x4002C290)
+
+
+
+
+
 void Joystick_Init(void);
 
 uint8_t Joystick_Left_Pressed(void);

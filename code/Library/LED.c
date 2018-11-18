@@ -1,27 +1,5 @@
 #include "LED.h"
-
-void LED_Init() {
-	LED_Front_Right_Init();
-	LED_Front_Left_Init();
-	LED_Back_Right_Init();
-	LED_Back_Left_Init();
-}
-
-void LED_Front_Right_Init() {
-	GPIO_DIR_Write(LED_Front_Right_PORT, LED_Front_Right_MASK, OUTPUT);
-}
-
-void LED_Front_Left_Init() {
-	GPIO_DIR_Write(LED_Front_Left_PORT, LED_Front_Left_MASK, OUTPUT);
-}
-
-void LED_Back_Right_Init() {
-	GPIO_DIR_Write(LED_Back_Right_PORT, LED_Back_Right_MASK, OUTPUT);
-}
-
-void LED_Back_Left_Init() {
-	GPIO_DIR_Write(LED_Back_Left_PORT, LED_Back_Left_MASK, OUTPUT);
-}
+#include "PWM.h"
 
 void LED_ON() {
 	LED_Front_Right_On();
@@ -30,20 +8,24 @@ void LED_ON() {
 	LED_Back_Left_On();
 }
 
+	
+
 void LED_Front_Right_On() {
-	GPIO_PIN_Write(LED_Front_Right_PORT, LED_Front_Right_MASK, LOW);
+	PWM_Write(100,3);
+
+	
 }
 
 void LED_Front_Left_On() {
-	GPIO_PIN_Write(LED_Front_Left_PORT, LED_Front_Left_MASK, LOW);
+	PWM_Write(100,4);	
 }
 
 void LED_Back_Right_On() {
-	GPIO_PIN_Write(LED_Back_Right_PORT, LED_Back_Right_MASK, HIGH);
+	PWM_Write(100,5);
 }
 
 void LED_Back_Left_On() {
-	GPIO_PIN_Write(LED_Back_Left_PORT, LED_Back_Left_MASK, HIGH);
+	PWM_Write(100,6);
 }
 
 void LED_OFF() {
@@ -54,19 +36,20 @@ void LED_OFF() {
 }
 
 void LED_Front_Right_Off() {
-	GPIO_PIN_Write(LED_Front_Right_PORT, LED_Front_Right_MASK, HIGH);
+	PWM_Write(0,3);
+
 }
 
 void LED_Front_Left_Off() {
-	GPIO_PIN_Write(LED_Front_Left_PORT, LED_Front_Left_MASK, HIGH);
+	PWM_Write(0,4);	
 }
 
 void LED_Back_Right_Off() {
-	GPIO_PIN_Write(LED_Back_Right_PORT, LED_Back_Right_MASK, LOW);
+	PWM_Write(0,5);
 }
 
 void LED_Back_Left_Off() {
-	GPIO_PIN_Write(LED_Back_Left_PORT, LED_Back_Left_MASK, LOW);
+	PWM_Write(0,6);
 }
 
 void LED_Forward(void) {
@@ -84,6 +67,8 @@ void LED_Backward(void) {
 }
 
 void LED_Right(void) {
+	
+	
 	LED_Front_Right_On();
 	LED_Front_Left_Off();
 	LED_Back_Right_On();
@@ -96,3 +81,5 @@ void LED_Left(void) {
 	LED_Back_Right_Off();
 	LED_Back_Left_On();
 }
+
+

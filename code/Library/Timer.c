@@ -14,12 +14,13 @@ void Timer_Init() {
 	TIMERA_IOCON_OUT |= func;
 	TIMERB_IOCON_OUT |= func;	
 	
-	// Enable Timer2 and Timer3
-	PCONP |= ((1<<22) | (1<<23));
+	// Enable Timer2 and Timer3 and timer 0
+	PCONP |= ((1<<22) | (1<<1) | (1<<23));
 	
 	// Change the mode of Timer2 and Timer3 to Timer Mode.
 	TIMER2->CTCR &= ~((1<<0) | (1<<1));
 	TIMER3->CTCR &= ~((1<<0) | (1<<1));
+	
 	
 	// Disable Timer Counter and Prescale Counter for Timer2 and Timer3.
 	TIMER2->TCR &= ~(1<<0);

@@ -29,6 +29,22 @@ typedef struct
   volatile	uint32_t CTCR;
 } PWM_TypeDef;
 
+
+
+
+#define IOCON_LED_ADDRESS_1	0x4002C094	//P1.5(P28)
+#define IOCON_LED_ADDRESS_2	0x4002C098	//P1.6(P27)
+#define IOCON_LED_ADDRESS_3	0x4002C09C	//P1.7(P26)
+#define IOCON_LED_ADDRESS_4	0x4002C0AC	//P1.11(P25)
+
+#define LED_Front_Right_PORT	*((volatile uint32_t*)(IOCON_LED_ADDRESS_1))
+#define LED_Front_Left_PORT	*((volatile uint32_t*)(IOCON_LED_ADDRESS_2))
+#define LED_Back_Left_PORT	*((volatile uint32_t*)(IOCON_LED_ADDRESS_3))
+#define LED_Back_Right_PORT	*((volatile uint32_t*)(IOCON_LED_ADDRESS_4))
+
+
+
+
 // Right Motor, ENA: PORT1_2 (PIN30) PWM0_1
 #define IOCON_MOTOR_RIGHT_SPEED_ADDRESS 0x4002C088
 #define IOCON_MOTOR_RIGHT_SPEED *((volatile uint32_t*)(IOCON_MOTOR_RIGHT_SPEED_ADDRESS))
@@ -36,6 +52,8 @@ typedef struct
 // Left Motor, ENB: PORT1_3 (PIN29) PWM0_2
 #define IOCON_MOTOR_LEFT_SPEED_ADDRESS 0x4002C08C
 #define IOCON_MOTOR_LEFT_SPEED *((volatile uint32_t*)(IOCON_MOTOR_LEFT_SPEED_ADDRESS))
+
+
 
 #define PWM0_BASE	0x40014000
 #define PWM1_BASE	0x40018000
@@ -45,6 +63,6 @@ typedef struct
 
 void PWM_Init(void);
 void PWM_Cycle_Rate(uint32_t period_In_Cycles);
-void PWM_Write(uint32_t T_ON);
+void PWM_Write(uint32_t T_ON, uint32_t section);
 
 #endif
