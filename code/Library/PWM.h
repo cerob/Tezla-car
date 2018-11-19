@@ -32,17 +32,6 @@ typedef struct
 
 
 
-#define IOCON_LED_ADDRESS_1	0x4002C094	//P1.5(P28)
-#define IOCON_LED_ADDRESS_2	0x4002C098	//P1.6(P27)
-#define IOCON_LED_ADDRESS_3	0x4002C09C	//P1.7(P26)
-#define IOCON_LED_ADDRESS_4	0x4002C0AC	//P1.11(P25)
-
-#define LED_Front_Right_PORT	*((volatile uint32_t*)(IOCON_LED_ADDRESS_1))
-#define LED_Front_Left_PORT	*((volatile uint32_t*)(IOCON_LED_ADDRESS_2))
-#define LED_Back_Left_PORT	*((volatile uint32_t*)(IOCON_LED_ADDRESS_3))
-#define LED_Back_Right_PORT	*((volatile uint32_t*)(IOCON_LED_ADDRESS_4))
-
-
 
 
 // Right Motor, ENA: PORT1_2 (PIN30) PWM0_1
@@ -63,6 +52,8 @@ typedef struct
 
 void PWM_Init(void);
 void PWM_Cycle_Rate(uint32_t period_In_Cycles);
-void PWM_Write(uint32_t T_ON, uint32_t section);
+void PWM_WriteLeft(uint32_t T_ON);
+void PWM_WriteRight(uint32_t T_ON);
+
 
 #endif

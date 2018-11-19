@@ -4,6 +4,11 @@ uint32_t a_currentTime = 0;
 uint32_t a_previousTime = 0;
 uint32_t a_capturedTime = 0;
 
+
+uint32_t isLeft = 0;
+uint32_t isRight = 0;
+
+
 uint32_t b_currentTime = 0;
 uint32_t b_previousTime = 0;
 uint32_t b_capturedTime = 0;
@@ -14,8 +19,8 @@ void Timer_Init() {
 	TIMERA_IOCON_OUT |= func;
 	TIMERB_IOCON_OUT |= func;	
 	
-	// Enable Timer2 and Timer3 and timer 0
-	PCONP |= ((1<<22) | (1<<1) | (1<<23));
+	// Enable Timer2 and Timer3
+	PCONP |= ((1<<22)  | (1<<23));
 	
 	// Change the mode of Timer2 and Timer3 to Timer Mode.
 	TIMER2->CTCR &= ~((1<<0) | (1<<1));

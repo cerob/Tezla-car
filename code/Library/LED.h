@@ -5,17 +5,17 @@
 #include "GPIO.h"
 #include "PWM.h"
 
- //#define LED_Front_Right_PORT PORT1
- #define LED_Front_Right_MASK ((uint32_t) 1 << 28)
+ #define LED_Front_Right_PORT PORT1
+ #define LED_Front_Right_MASK ((uint32_t) 1 << 24)
 
-// #define LED_Front_Left_PORT PORT1
- #define LED_Front_Left_MASK ((uint32_t) 1 << 27)
+ #define LED_Front_Left_PORT PORT1
+ #define LED_Front_Left_MASK ((uint32_t) 1 << 23)
 
-// #define LED_Back_Right_PORT PORT1
- #define LED_Back_Right_MASK ((uint32_t) 1 << 26)
+ #define LED_Back_Right_PORT PORT1
+ #define LED_Back_Right_MASK ((uint32_t) 1 << 20)
 
-// #define LED_Back_Left_PORT PORT0
- #define LED_Back_Left_MASK ((uint32_t) 1 << 25)
+ #define LED_Back_Left_PORT PORT0
+ #define LED_Back_Left_MASK ((uint32_t) 1 << 21)
 
 
 void LED_Init(void);
