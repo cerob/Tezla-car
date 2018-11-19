@@ -390,12 +390,12 @@
             <File>
               <FileName>Parameters.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Parameters.h</FilePath>
+              <FilePath>Library\Parameters.h</FilePath>
             </File>
             <File>
               <FileName>Parameters.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Parameters.c</FilePath>
+              <FilePath>Library\Parameters.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -458,14 +458,24 @@
               <FilePath>.\Library\Timer.h</FilePath>
             </File>
             <File>
+              <FileName>MotorController.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Library\MotorController.h</FilePath>
+            </File>
+            <File>
               <FileName>MotorController.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Library\MotorController.c</FilePath>
             </File>
             <File>
-              <FileName>MotorController.h</FileName>
+              <FileName>Controller.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>Library\Controller.c</FilePath>
+            </File>
+            <File>
+              <FileName>Controller.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Library\MotorController.h</FilePath>
+              <FilePath>Library\Controller.h</FilePath>
             </File>
           </Files>
         </Group>

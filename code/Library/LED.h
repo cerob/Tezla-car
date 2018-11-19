@@ -3,6 +3,7 @@
 
 #include "LPC407x_8x_177x_8x.h"
 #include "GPIO.h"
+#include "PWM.h"
 
  //#define LED_Front_Right_PORT PORT1
  #define LED_Front_Right_MASK ((uint32_t) 1 << 28)
@@ -28,6 +29,11 @@ void LED_Front_Right_On(void);
 void LED_Front_Left_On(void);
 void LED_Back_Right_On(void);
 void LED_Back_Left_On(void);
+
+void LED_Front_Right_On_Blink(void);
+void LED_Front_Left_On_Blink(void);
+void LED_Back_Right_On_Blink(void);
+void LED_Back_Left_On_Blink(void);
 
 void LED_OFF(void);
 void LED_Front_Right_Off(void);

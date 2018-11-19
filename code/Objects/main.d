@@ -14,4 +14,5 @@
 .\objects\main.o: Library/LED.h
 .\objects\main.o: Library/Joystick.h
 .\objects\main.o: Library/MotorController.h
-.\objects\main.o: Parameters.h
+.\objects\main.o: Library/Parameters.h
+.\objects\main.o: Library/Controller.h

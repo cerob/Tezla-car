@@ -1,5 +1,9 @@
 #ifndef MOTORCONTROLLER_H
 #define MOTORCONTROLLER_H
+#include "Timer.h"
+#include "PWM.h"
+
+#include "Parameters.h"
 
 #include "LPC407x_8x_177x_8x.h"
 #include "GPIO.h"
@@ -12,6 +16,10 @@
 void MotorController_Init(void);
 void MC_Set_Direction_Forward(void);
 void MC_Set_Direction_Backward(void);
+void MC_Set_Direction_Right(void);
+void MC_Set_Direction_Left(void);
+void MC_Set_Turning(void);
+
 void MC_Stop_Brakes(void);
 
 #endif

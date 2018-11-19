@@ -56,11 +56,6 @@ func|=1<<0;
  func &= ~(1<<2);
 LED_Back_Right_PORT=func;
 
-
-
-	
-	
-	
 	// Enable PWM output for corresponding pins.
 	PWM0 -> PCR |= (1 << 9 | 1 << 10 | 1 << 11 | 1 << 12 | 1 << 13 | 1 << 14);
 	
@@ -84,7 +79,6 @@ LED_Back_Right_PORT=func;
 	
 	// Clear Reset on the PWM
 	PWM0->TCR &= ~(1<<1);
-	
 
 	PWM_Write(0, 1);
 	PWM_Write(0, 2);
@@ -93,19 +87,14 @@ LED_Back_Right_PORT=func;
 	PWM_Write(0, 4);
 	PWM_Write(0, 5);
 	PWM_Write(0, 6);
-	
 }
 
 void PWM_Cycle_Rate(uint32_t period_In_Cycles) {
 	PWM0->MR0 = (PERIPHERAL_CLOCK_FREQUENCY / 1000000) * period_In_Cycles * 1000;
 	
 	// Enable PWM Match 0/1/2 Latches.
-	// TODO: inspect
 	PWM0 -> LER |= (1 << 0);
 }
-
-
-
 
 void PWM_Write(uint32_t T_ON, uint32_t section) {	
 	uint32_t dutyCycle;
@@ -121,8 +110,6 @@ void PWM_Write(uint32_t T_ON, uint32_t section) {
 		dutyCycle++;
 	}
 	
-
-
    if (section==1){PWM0 -> MR1 = dutyCycle;}
    else if (section==2){PWM0 -> MR2 = dutyCycle;}
    else if (section==3){PWM0 -> MR3 = dutyCycle;}
