@@ -9,8 +9,8 @@ Id,Name,Shape Library,Page ID,Contained By,Group,Line Source,Line Destination,So
 8,Process,Flowchart Shapes,1,,,,,,,LED (BR)
 9,Process,Flowchart Shapes,1,,,,,,,LED (BL)
 10,Process,Flowchart Shapes,1,,,,,,,Motor (FR) 
-11,Process,Flowchart Shapes,1,,,,,,,Motor (FL) 
-12,Process,Flowchart Shapes,1,,,,,,,Motor (BR) 
+11,Process,Flowchart Shapes,1,,,,,,,Motor (BR) 
+12,Process,Flowchart Shapes,1,,,,,,,Motor (FL) 
 13,Process,Flowchart Shapes,1,,,,,,,Motor (BL) 
 14,Process,Flowchart Shapes,1,,,,,,,Joystick
 15,Process,Flowchart Shapes,1,,,,,,,GPIO
