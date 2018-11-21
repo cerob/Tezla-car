@@ -62,8 +62,6 @@
 \newpage
 \section{System Level Structural Diagram (Block Diagram)}
 
-%TODO: Functionalities
-
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=1\columnwidth]{structure-diagram.png}
@@ -72,6 +70,18 @@
 \vskip\baselineskip % Leave a vertical skip below the figure
 \label{fig:sample}
 \end{figure}
+
+\textbf{LPC4088 Microcontroller:} Main part of the car. Runs software and controls peripherals.
+
+\textbf{Motor Speed Sensor:} Used to measure motor speed by counting holes. It's used to first, to detect speed and the second, getting feedback on turn angle of the car.
+
+\textbf{Motor controller:} By getting inputs from the main board, controls motors by means of controlling speed, directions, soft and hard brakes.
+
+\textbf{Motor:} Gives tork to the car, and thus moves.
+
+\textbf{LEDs:} Emits light, controlled by the main board. Used for car signals.
+
+\textbf{Joystick:} Takes input from the player/user and informs the main board, so it can take appropriate action.
 
 
 \newpage
