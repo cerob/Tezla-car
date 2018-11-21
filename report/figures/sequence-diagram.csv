@@ -1,0 +1,45 @@
+Id,Name,Shape Library,Page ID,Contained By,Group,Line Source,Line Destination,Source Arrow,Destination Arrow,Text Area 1
+1,Page,,,,,,,,,Page 1
+2,Object,UML,1,,,,,,,Joystick (User)
+3,Activation,UML,1,,,,,,,
+4,Activation,UML,1,,,,,,,
+5,Object,UML,1,,,,,,,SoftWare (LPC4088)
+6,Activation,UML,1,,,,,,,
+7,Object,UML,1,,,,,,,LED
+8,Activation,UML,1,,,,,,,
+9,Object,UML,1,,,,,,,Motor Controller
+10,Activation,UML,1,,,,,,,
+11,Activation,UML,1,,,,,,,
+12,Object,UML,1,,,,,,,Speed  Sensor
+13,Note,Default,1,,,,,,,Rotation completed
+14,Activation,UML,1,,,,,,,
+15,Note,Default,1,,,,,,,Rotation completed
+16,Line,,1,,,2,,None,None,
+17,Line,,1,,,5,,None,None,
+18,Line,,1,,,3,4,None,Arrow,UP button
+19,Line,,1,,,7,,None,None,
+20,Line,,1,,,,6,None,Arrow,Turn on FR and FL LEDs Turn off BR and BL LEDs
+21,Line,,1,,,9,,None,None,
+22,Line,,1,,,4,8,None,Arrow,Set direction of all motors  to forward
+23,Line,,1,,,12,,None,None,
+24,Line,,1,,,4,10,None,Arrow,Start counting rotations till ROTATION_NUMBER_FOR_90_DEGREE catches
+25,Line,,1,,,,,None,Arrow,DOWN button
+26,Line,,1,,,,,None,Arrow,Turn on BR and BL LEDs Turn off FR and FL LEDs
+27,Line,,1,,,4,,None,Arrow,Set direction of all motors  to backward
+28,Line,,1,,,,,None,Arrow,RIGHT button
+29,Line,,1,,,,,None,Arrow,Turn on FR and BR LEDs Turn off FL and BL LEDs
+30,Line,,1,,,,,None,Arrow,"Set direction of  right motors to backward,  left motors to forward"
+31,Line,,1,,,,,Arrow,None,Catch defined number of rotations
+32,Line,,1,,,,,None,Arrow,"Set direction of  right motors to backward,  left motors to forward"
+33,Line,,1,,,,,None,Arrow,Stop engines
+34,Line,,1,,,,,None,Arrow,Turn off all LEDs
+35,Line,,1,,,,,None,Arrow,LEFT button
+36,Line,,1,,,,,None,Arrow,Start counting rotations till ROTATION_NUMBER_FOR_90_DEGREE catches
+37,Line,,1,,,,,None,Arrow,Turn on FL and BL LEDs Turn off FR and BR LEDs
+38,Line,,1,,,,,None,Arrow,"Set direction of  left motors to backward,  right motors to forward"
+39,Line,,1,,,,,Arrow,None,Catch defined number of rotations
+40,Line,,1,,,,,None,Arrow,Stop engines
+41,Line,,1,,,,,None,Arrow,Turn off all LEDs
+42,Line,,1,,,,,None,Arrow,Stop engines
+43,Line,,1,,,,,None,Arrow,Turn off all LEDs
+44,Line,,1,,,,,None,Arrow,CENTER button

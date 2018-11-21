@@ -54,7 +54,7 @@
 
 \title{{\Huge CmpE 443 Final Project Design Document} \\ Group Name: Tezla  }
 \author{Members \\ Abdurrahman DILMAC (Team Leader) \\ Ahmet Semih ARI\\ Ramazan ARSLAN\\ Yunus Emre DEMIRCI}
-\date{December 12, 2018 \\ Version 1.00}
+\date{November 21, 2018 \\ Version 1.00}
 %
 \begin{document}
 \maketitle
@@ -62,17 +62,27 @@
 \newpage
 \section{System Level Structural Diagram (Block Diagram)}
 
-This is where system level structural diagram will be put. Do not forget to describe functionality of the components in the scope of the given problem.
+%TODO: Functionalities
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=1\columnwidth]{structure-diagram.png}
+\end{center}
+\caption{Block Diagram of car.}
+\vskip\baselineskip % Leave a vertical skip below the figure
+\label{fig:sample}
+\end{figure}
+
 
 \newpage
 \section{Sequence Diagram}
 
-Sequence Diagram would be here. You should show the high level relationships between modules clearly (you do not need to give details such as variable names and function names). The relationship between the hardwares and the software must be demonstrated in this diagram.  Explain each module as in your labs. Example Sequence Diagram for Lab 7 is provided below Figure:
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=1\columnwidth]{seqDiagram1.jpg}
+\hspace*{-1.1in}
+\includegraphics[width=1.30\columnwidth]{sequence-diagram.png}
 \end{center}
-\caption{Sample Sequence Diagram.}
+\caption{Sequence Diagram.}
 \vskip\baselineskip % Leave a vertical skip below the figure
 \label{fig:sample}
 \end{figure}
@@ -96,6 +106,8 @@ Back Left LED & PIN8 & P0.21 & GPIO & Supports digital I/O \\\hline
 \caption{LED Pins and their functionalities}
 \end{table}
 \end{center}
+
+% TODO circuit diagram
 
 \newpage
 \section{Motor - Speed Sensor Connection}
