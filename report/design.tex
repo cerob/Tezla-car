@@ -76,43 +76,93 @@ Sequence Diagram would be here. You should show the high level relationships bet
 \vskip\baselineskip % Leave a vertical skip below the figure
 \label{fig:sample}
 \end{figure}
+
+
 \newpage
 \section{LED Connections}
 
-All the components which are controlled via LPC4088 should be connected to the board. Therefore, you should determine the pins and their functionalities. Draw the described table in the term project interim report description document. After you determine the all the pins, draw the circuit schematic for the LED circuits.
+All the components which are controlled via LPC4088 should be connected to the board. Therefore, you should determine the pins and their functionalities. Draw the described table in the term project interim report description document. After you determine the all the pins, draw the circuit schematic for the LED circuits. \\
+
+\begin{center}
+\begin {table}[H]
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+The LED name & LPC4088 PIN & Port & Pin Functionality & Reason \\\hline
+Front Right LED & PIN5 & P1.24 & GPIO & Supports digital I/O \\\hline
+Front Left LED & PIN6 & P1.23 & GPIO & Supports digital I/O \\\hline
+Back Right LED & PIN7 & P1.20 & GPIO & Supports digital I/O \\\hline
+Back Left LED & PIN8 & P0.21 & GPIO & Supports digital I/O \\\hline
+\end{tabular}
+\caption{LED Pins and their functionalities}
+\end{table}
+\end{center}
+
 \newpage
 \section{Motor - Speed Sensor Connection}
 
-You should determine the pins of sensors and their functionalities.Draw a table which shows the pins and their functionalities as described in the project description document.
+\begin {table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Speed sensor PIN & LPC4088 PIN & Port & Pin Functionality & Reason \\\hline
+Power GND & PIN1 & GND & Ground & Ground is needed \\\hline
+VCC & PIN44 & VU & Power input & For transferring voltage \\\hline
+\shortstack{Right\\ Speed Sensor \\OUT} & PIN15 & P0.23 & T3\_CAP\_0 & \shortstack{Supports\\ Timer functionality} \\\hline
+\shortstack{Left\\ Speed Sensor \\OUT} & PIN34 & P1.4 & T2\_CAP\_0 & \shortstack{Supports\\ Timer functionality} \\\hline
+\end{tabular}
+\caption{Motor Driver and board PIN connections with their functionalities.}
+\end{center}
+\end{table}
+
+Even though two different speed sensors said to be used in the project description, our implementation can work with only one speed sensor for this part of the project. So, Left is connected to the board by design, but not needed and thus not used.
+
+
 \newpage
 \section{Motor - Driver Connection}
-Here is an example figure for you to use the LaTeX format. \\ \\
-\begin{figure}[htbp]
+
+There is only one motor controller to control 4 motors. Output A is used for right motors and Output B is for left motors.
+
+\begin {table}[H]
 \begin{center}
-\includegraphics[width=0.5\columnwidth]{sample_figure.png}
+\begin{tabular}{|c|c|}
+\hline
+Motor Terminal & Motor Driver Terminal \\\hline
+Motor 1 + & Output A + \\\hline
+Motor 1 - & Output A - \\\hline
+Motor 2 + & Output A + \\\hline
+Motor 2 - & Output A - \\\hline
+Motor 3 + & Output B + \\\hline
+Motor 3 - & Output B - \\\hline
+Motor 4 + & Output B + \\\hline
+Motor 4 - & Output B - \\\hline
+\end{tabular}
+\caption{Motor Driver and motor connections.}
 \end{center}
-\caption{Sin and
-Cosine.}
-\vskip\baselineskip % Leave a vertical skip below the figure
-\label{fig:sample}
-\end{figure}
+\end{table}
+
+
 \newpage
 \section{Driver - Board Connection}
 
-Here is an example table for you to use the LaTeX format.\\ \\
-
-
+Here is the table depicting relations between the board and motor controller:
 
 \begin {table}[H]
-\begin{tabular}{|p{1in}|p{1in}|p{1in}|p{1in}|p{1in}|} \hline 
-\textbf{Algorithm} & \textbf{Feature 1} & \textbf{Feature 2} & \textbf{ Feature 3} & \textbf{Feature n} \\ 
-\hline 
-\textbf{Alg 1} & 1 & \textbf{2} & \textbf{23} & \textbf{68.7\%} \\ \hline 
-\textbf{Alg 2} & \textbf{9} & \textbf{2} & \textbf{37} & \textbf{75.68\%} \\ \hline 
-\textbf{Alg 3} & \textbf{10} & \textbf{3} & \textbf{51} & \textbf{96.34\%} \\ \hline 
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Motor driver PIN & LPC4088 PIN & Port & Pin Functionality & Reason \\\hline
+Power GND & PIN1 & GND & Ground & Ground is needed \\\hline
++5V Power & PIN44 & Vout & Power input & For transferring voltage \\\hline
+A Enable & PIN29 & P1.3 & PWM0\_1 (ENA) & Supports PWM Output \\\hline
+B Enable & PIN30 & P1.2 & PWM0\_2 (ENB) & Supports PWM Output \\\hline
+Logic Input 1 & PIN12 & P0.8 & GPIO & Supports digital I/O \\\hline
+Logic Input 2 & PIN11 & P0.9 & GPIO & Supports digital I/O \\\hline
+Logic Input 3 & PIN16 & P0.24 & GPIO & Supports digital I/O \\\hline
+Logic Input 4 & PIN13 & P0.7 & GPIO & Supports digital I/O \\\hline
 \end{tabular}
-\caption {Should be a caption}
-\end {table}
+\caption{Motor Driver and board PIN connections with their functionalities.}
+\end{center}
+\end{table}
 
 
 \end{document}
