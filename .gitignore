@@ -1,3 +1,9 @@
+# Cloud ignore
+.nosync
+
+# Object codes
+code/Objects/
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
