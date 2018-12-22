@@ -6,14 +6,15 @@
 #include "PWM.h"
 
  #define LED_Front_Right_PORT PORT1
+ //Front Right Led
  #define LED_Front_Right_MASK ((uint32_t) 1 << 24)
-
+ //Front Left Led
  #define LED_Front_Left_PORT PORT1
  #define LED_Front_Left_MASK ((uint32_t) 1 << 23)
-
+ //Back Right Led
  #define LED_Back_Right_PORT PORT1
  #define LED_Back_Right_MASK ((uint32_t) 1 << 20)
-
+ //Back Left Led
  #define LED_Back_Left_PORT PORT0
  #define LED_Back_Left_MASK ((uint32_t) 1 << 21)
 
@@ -29,11 +30,6 @@ void LED_Front_Right_On(void);
 void LED_Front_Left_On(void);
 void LED_Back_Right_On(void);
 void LED_Back_Left_On(void);
-
-void LED_Front_Right_On_Blink(void);
-void LED_Front_Left_On_Blink(void);
-void LED_Back_Right_On_Blink(void);
-void LED_Back_Left_On_Blink(void);
 
 void LED_OFF(void);
 void LED_Front_Right_Off(void);

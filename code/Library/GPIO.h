@@ -6,7 +6,7 @@
 typedef struct
 {
   volatile	uint32_t DIR;
-						uint32_t RESERVED[3];
+						uint32_t RESERVED0[3];
   volatile	uint32_t MASK;
   volatile	uint32_t PIN;
   volatile	uint32_t SET;
@@ -40,8 +40,8 @@ typedef enum {
 #define PORT4_BASE		(GPIO_ADDRESS + 0x080)
 #define PORT5_BASE		(GPIO_ADDRESS + 0x0A0)
 
-void GPIO_DIR_Write(GPIO_TypeDef* PORT, uint32_t MASK, uint8_t value);
-void GPIO_PIN_Write(GPIO_TypeDef* PORT, uint32_t MASK, uint8_t value);
-uint32_t GPIO_PIN_Read(GPIO_TypeDef* PORT, uint32_t MASK);
+void GPIO_DIR_Write(GPIO_TypeDef* PORT,uint32_t MASK,uint8_t value);
+void GPIO_PIN_Write(GPIO_TypeDef* PORT,uint32_t MASK,uint8_t value);
+uint32_t GPIO_PIN_Read(GPIO_TypeDef* PORT,uint32_t MASK);
 
 #endif

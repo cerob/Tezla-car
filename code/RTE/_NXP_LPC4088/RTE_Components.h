@@ -3,8 +3,8 @@
  * Auto generated Run-Time-Environment Component Configuration File
  *      *** Do not modify ! ***
  *
- * Project: 'Tezla' 
- * Target:  'Target 1' 
+ * Project: 'LAB_005' 
+ * Target:  'NXP_LPC4088' 
  */
 
 #ifndef RTE_COMPONENTS_H

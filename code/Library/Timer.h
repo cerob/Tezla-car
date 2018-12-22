@@ -49,6 +49,8 @@ typedef struct {
 extern uint32_t a_currentTime;
 extern uint32_t a_previousTime;
 extern uint32_t a_capturedTime;
+extern uint32_t RightButtonTime;
+extern uint32_t LeftButtonTime;
 
 extern uint32_t b_currentTime;
 extern uint32_t b_previousTime;
