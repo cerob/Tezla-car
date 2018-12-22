@@ -12,7 +12,6 @@
 #define SECOND 500000
  
 void init() {
-	//initilaze led
 	LED_Init();	
 	PWM_Init();
 	Joystick_Init();

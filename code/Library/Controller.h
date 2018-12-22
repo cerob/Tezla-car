@@ -4,8 +4,8 @@
 #include "Parameters.h"
 
 
-void Led_Motor_Forward();
-void Led_Motor_Backward();
-void Led_Motor_Stop();
-void Led_Motor_Right();
-void Led_Motor_Left();
+void Led_Motor_Forward(void);
+void Led_Motor_Backward(void);
+void Led_Motor_Stop(void);
+void Led_Motor_Right(void);
+void Led_Motor_Left(void);
