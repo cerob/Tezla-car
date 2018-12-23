@@ -37,13 +37,13 @@ typedef struct {
 /* There are two timers to be used for two different speed sensors. */
 // Timer A: PORT0_4 (T2_CAP_0)
 // FUNC = 011
-#define TIMERA_IOCON_OUT_ADDRESS 0x4002C010
-#define TIMERA_IOCON_OUT *((volatile uint32_t*)(TIMERA_IOCON_OUT_ADDRESS))
+#define TIMER2_IOCON_OUT_ADDRESS 0x4002C010
+#define TIMER2_IOCON_OUT *((volatile uint32_t*)(TIMER2_IOCON_OUT_ADDRESS))
 
 // Timer B: PORT0_23 (T3_CAP_0)
 // FUNC = 011
-#define TIMERB_IOCON_OUT_ADDRESS 0x4002C05C
-#define TIMERB_IOCON_OUT *((volatile uint32_t*)(TIMERB_IOCON_OUT_ADDRESS))
+#define TIMER3_IOCON_OUT_ADDRESS 0x4002C05C
+#define TIMER3_IOCON_OUT *((volatile uint32_t*)(TIMER3_IOCON_OUT_ADDRESS))
 
 
 extern uint32_t a_currentTime;

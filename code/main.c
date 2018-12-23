@@ -5,8 +5,10 @@
 #include "Library/LED.h"
 #include "Library/Joystick.h"
 #include "Library/MotorController.h"
+#include "Library/Ultrasonic.h"
 #include "Library/Controller.h"
 #include "Library/Parameters.h"
+#include "Library/Wait.h"
 
 // Stores half second
 #define SECOND 500000
@@ -16,7 +18,15 @@ void init() {
 	PWM_Init();
 	Joystick_Init();
 	Timer_Init();
-	MotorController_Init();	
+	//MotorController_Init();	
+	Ultrasonic_Trigger_Timer_Init();
+	Ultrasonic_Capture_Timer_Init();
+}
+
+void SleepMode() {
+	SCR &= ~(1<<2);
+	PCON &= ~((1<<0) | (1<<1));
+	__WFI();
 }
 
 // Stores last continued movement
@@ -25,12 +35,15 @@ uint32_t whichLed=0;
 uint32_t counter=0;
 
 void update() {
+	Ulrasonic_Start_Trigger();
+	//wait(150)
+	
 	// Control car is turning or not
 	if(whichLed==4 || whichLed==2){
 		// If car does not turn 90 degree, continue turning
 		if(counter<ROTATION_NUMBER_FOR_90_DEGREE){
 			// If timer3 capture faling or rising edge we inrease counter
-			if((TIMER3->CR0)>a_currentTime){			 
+			if((TIMER3->CR0)>a_currentTime){
 				a_currentTime=TIMER3->CR0;
 				counter++;
 			}
@@ -94,6 +107,8 @@ void update() {
 		// We reset counter
 		counter=0;
 	}
+	
+	
 	// If car continiues turning right, blink
 	if(whichLed==2){
 		// If Time(mod 500ms)< 250 ms, right leds turned on, other wise all led turned off
