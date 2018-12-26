@@ -6,7 +6,7 @@ void MotorController_Init() {
 	uint32_t func =PORT0->DIR;
 	func|= MC_IN1_MASK ;
 	func|= MC_IN2_MASK ;
-	func|=  MC_IN3_MASK ;
+	func|= MC_IN3_MASK ;
 	func|= MC_IN4_MASK; 
 	PORT0->DIR=func;
 	// Stop motors

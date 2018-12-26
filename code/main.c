@@ -9,6 +9,7 @@
 #include "Library/Controller.h"
 #include "Library/Parameters.h"
 #include "Library/Wait.h"
+#include "Library/DrivingMode.h"
 
 // Stores half second
 #define SECOND 500000
@@ -21,6 +22,7 @@ void init() {
 	//MotorController_Init();	
 	Ultrasonic_Trigger_Timer_Init();
 	Ultrasonic_Capture_Timer_Init();
+	//External_Init();
 }
 
 void SleepMode() {

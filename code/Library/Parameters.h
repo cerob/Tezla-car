@@ -22,6 +22,7 @@ static const char WIFI_GET_URL[] = "http://192.168.0.100:8080/HWLAB_IoT/GetInfor
 static const char WIFI_POST_MANUEL[] = "http://192.168.0.100:8080/HWLAB_IoT/SendInformation?ID=&DATA=MANUEL";
 static const char WIFI_POST_AUTO[] = "http://192.168.0.100:8080/HWLAB_IoT/SendInformation?ID=&DATA=AUTO";
 static char START_MODE = MANUEL;
+static char DRIVING_MODE = MANUEL;
 
 
 void Set_Turn_Left_Flag(void);
