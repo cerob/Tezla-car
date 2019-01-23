@@ -5,13 +5,13 @@
 
 #include "GPIO.h"
 
-#define JOYSTICK_PORT	PORT5
+#define JOYSTICK_PORT PORT5
 
-#define JOYSTICK_LEFT_MASK		((uint32_t) 1 << 0)
-#define JOYSTICK_DOWN_MASK		((uint32_t) 1 << 1)
-#define JOYSTICK_UP_MASK			((uint32_t) 1 << 2)
-#define JOYSTICK_CENTER_MASK	((uint32_t) 1 << 3)
-#define JOYSTICK_RIGHT_MASK		((uint32_t) 1 << 4)
+#define JOYSTICK_LEFT_MASK ((uint32_t)1 << 0)
+#define JOYSTICK_DOWN_MASK ((uint32_t)1 << 1)
+#define JOYSTICK_UP_MASK ((uint32_t)1 << 2)
+#define JOYSTICK_CENTER_MASK ((uint32_t)1 << 3)
+#define JOYSTICK_RIGHT_MASK ((uint32_t)1 << 4)
 
 void Joystick_Init(void);
 
